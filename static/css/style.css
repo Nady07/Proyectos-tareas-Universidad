@@ -1,0 +1,178 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.calculator-container {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#toggleMode {
+    display: block;
+    margin: 0 auto 10px;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #ff9500;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+#toggleMode:hover {
+    background: #e68a00;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+
+.calculator.with-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.calculator.dark {
+    background: #333;
+}
+
+.calculator.dark.with-background {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+#display {
+    grid-column: span 4;
+    padding: 20px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #f0f0f0;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+.calculator.dark #display {
+    background: #444;
+    color: white;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #d4d4d4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    z-index: 1;
+}
+
+button:hover {
+    background: #c4c4c4;
+}
+
+.operator, .function {
+    background: #ff9500;
+    color: white;
+}
+
+.operator:hover, .function:hover {
+    background: #e68a00;
+}
+
+.dark-mode {
+    background-color: #333;
+}
+
+.dark-mode .calculator-container {
+    background: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode button {
+    background: #666;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background: #777;
+}
+
+.upload-section {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.upload-label {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.upload-label:hover {
+    background: #45a049;
+}
+
+#uploadButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+#uploadButton:hover {
+    background: #45a049;
+}
+
+#uploadButton:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}

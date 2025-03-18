@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Minimalista</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="calculator-container">
+        <button id="toggleMode">🌙</button>
+        <div class="calculator" id="calculator">
+            <input type="text" id="display" readonly placeholder="0">
+            <button class="function" onclick="clearDisplay()">C</button>
+            <button class="function" onclick="backspace()">⌫</button>
+            <button class="operator" onclick="addToDisplay('%')">%</button>
+            <button class="operator" onclick="addToDisplay('/')">÷</button>
+            <button onclick="addToDisplay('7')">7</button>
+            <button onclick="addToDisplay('8')">8</button>
+            <button onclick="addToDisplay('9')">9</button>
+            <button class="operator" onclick="addToDisplay('*')">×</button>
+            <button onclick="addToDisplay('4')">4</button>
+            <button onclick="addToDisplay('5')">5</button>
+            <button onclick="addToDisplay('6')">6</button>
+            <button class="operator" onclick="addToDisplay('-')">-</button>
+            <button onclick="addToDisplay('1')">1</button>
+            <button onclick="addToDisplay('2')">2</button>
+            <button onclick="addToDisplay('3')">3</button>
+            <button class="operator" onclick="addToDisplay('+')">+</button>
+            <button onclick="addToDisplay('0')">0</button>
+            <button onclick="addToDisplay('.')">.</button>
+            <button class="operator" onclick="calculate()">=</button>
+        </div>
+        <div class="upload-section">
+            <label for="background_image" class="upload-label">Seleccionar archivo</label>
+            <input type="file" id="background_image" name="background_image" accept="image/*" style="display: none;">
+            <button id="uploadButton" disabled>Agregar Fondo</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+</body>
+</html>
