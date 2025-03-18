@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    transition: background 0.3s;
+}
+
+.calculator {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    background: #eaeaea;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #d9d9d9;
+    transition: background 0.3s;
+}
+
+.btn:active {
+    background: #bfbfbf;
+}
+
+.btn.orange {
+    background: #ff9500;
+    color: white;
+}
+
+.btn.gray {
+    background: #a6a6a6;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #333;
+}
+
+.dark-mode .calculator {
+    background: #1c1c1c;
+}
+
+.dark-mode .display {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .btn {
+    background: #505050;
+    color: white;
+}
+
+.dark-mode .btn.orange {
+    background: #ff9500;
+}
+
+.dark-mode .btn.gray {
+    background: #a6a6a6;
+}
+
+/* Switch de modo oscuro */
+.toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.toggle-label {
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    transition: 0.3s;
+}
+
+#theme-toggle:checked + .toggle-label::before {
+    left: 20px;
+}
+
+#theme-toggle:checked + .toggle-label {
+    background: #ff9500;
+}
