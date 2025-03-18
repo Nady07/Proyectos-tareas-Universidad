@@ -35,7 +35,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\DELL\Desktop\calculadoraC\venv"
+=======
+VIRTUAL_ENV="C:\Users\DELL\Desktop\calculadora2\venv"
+>>>>>>> 7b09a66 (calculadora2)
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

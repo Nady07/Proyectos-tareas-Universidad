@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, jsonify, send_from_directory
 import os
 from utils.file_utils import allowed_file, save_uploaded_file
@@ -42,3 +43,23 @@ def uploaded_file(filename):
 
 if __name__ == '__main__':
     app.run(debug=True)
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('calculator.html')
+
+@app.route('/calculate', methods=['POST'])
+def calculate():
+    try:
+        expression = request.json.get('expression', '')
+        result = eval(expression)  # Evalúa la expresión matemática
+        return jsonify({'result': result})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000, debug=True)
+    

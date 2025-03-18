@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=C:\Users\DELL\Desktop\calculadoraC\venv
+=======
+set VIRTUAL_ENV=C:\Users\DELL\Desktop\calculadora2\venv
+>>>>>>> 7b09a66 (calculadora2)
 
 if not defined PROMPT set PROMPT=$P$G
 
