@@ -27,6 +27,7 @@ El objetivo de este repositorio es documentar mi progreso académico y servir co
 
 ## Estructura del Proyecto
 Proyectos-tareas-Universidad/
+
 ├── app.py # Aplicación principal (posiblemente Flask)
 
 ├── requirements.txt # Dependencias de Python
