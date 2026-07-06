@@ -28,18 +28,31 @@ El objetivo de este repositorio es documentar mi progreso académico y servir co
 ## Estructura del Proyecto
 Proyectos-tareas-Universidad/
 ├── app.py # Aplicación principal (posiblemente Flask)
+
 ├── requirements.txt # Dependencias de Python
+
 ├── static/ # Archivos estáticos (CSS, JS, imágenes)
+
 │ ├── css/
+
 │ ├── js/
+
 │ └── img/
+
 ├── templates/ # Plantillas HTML (para Flask)
+
 │ ├── index.html
+
 │ └── ...
+
 ├── utils/ # Utilidades y funciones auxiliares
+
 ├── calculadora3 # Proyecto de calculadora
+
 ├── .gitignore # Archivos ignorados por Git
+
 └── README.md # Este archivo
+
 
 ---
 
